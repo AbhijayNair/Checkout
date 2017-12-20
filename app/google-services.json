@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "379712844191",
+    "firebase_url": "https://checkout-a38f5.firebaseio.com",
+    "project_id": "checkout-a38f5",
+    "storage_bucket": "checkout-a38f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379712844191:android:60bde64705b4f41e",
+        "android_client_info": {
+          "package_name": "org.abhijay.com.checkout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379712844191-6vlkioj08au5pnkpm6p3ehfsjsdt3ukt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDxeXBlfWrbg6C7dnI1srqMMv_wFS92bU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

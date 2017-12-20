@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Checkout</string>
+    <string-array name="college_names">
+        <item>AAA</item>
+        <item>BBB</item>
+        <item>CCC</item>
+    </string-array>
+</resources>
