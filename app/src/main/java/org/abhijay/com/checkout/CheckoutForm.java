@@ -35,7 +35,8 @@ public class CheckoutForm extends AppCompatActivity implements AdapterView.OnIte
     Button button;
     public String uid="saff",name,email="fdd",event="dfd",phone,college="AAA",payment="NO";
     EditText editname,editphone;
-
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
     //TODO take uid,name,email,event from firebase
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,12 +51,30 @@ public class CheckoutForm extends AppCompatActivity implements AdapterView.OnIte
         button = findViewById(R.id.button);
         editname = findViewById(R.id.editname);
         editphone = findViewById(R.id.editphone);
+        databaseReference = FirebaseDatabase.getInstance().getReference("UserData");
+
+        FirebaseDatabase  database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO add for loop for individual events
                 name = editname.getText().toString();
                 phone = editphone.getText().toString();
+                String id = databaseReference.push().getKey();
+                UserData userData = new UserData(uid,name,email,event,phone,college,payment);
+                databaseReference.child(id).child("uid").setValue(uid);
+                databaseReference.child(id).child("name").setValue(name);
+                databaseReference.child(id).child("email").setValue(email);
+                databaseReference.child(id).child("event").setValue(event);
+                databaseReference.child(id).child("phone").setValue(phone);
+                databaseReference.child(id).child("college").setValue(college);
+                databaseReference.child(id).child("payment").setValue(payment);
+
+
                 new SendRequest().execute();
             }
         });

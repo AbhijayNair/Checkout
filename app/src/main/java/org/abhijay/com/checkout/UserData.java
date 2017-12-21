@@ -5,7 +5,13 @@ package org.abhijay.com.checkout;
  */
 
 public class UserData {
-    String uid,name,email,event,phone,college,payment;
+    String uid;
+    String name;
+    String email;
+    String event;
+    String phone;
+    String college;
+    String payment;
 
     public UserData(String Uid,String Name,String Email,String Event,String Phone,String College,String Payment){
         uid = Uid;
