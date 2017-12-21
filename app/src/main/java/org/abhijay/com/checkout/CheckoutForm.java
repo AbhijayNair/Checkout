@@ -66,6 +66,7 @@ public class CheckoutForm extends AppCompatActivity implements AdapterView.OnIte
                 phone = editphone.getText().toString();
                 String id = databaseReference.push().getKey();
                 UserData userData = new UserData(uid,name,email,event,phone,college,payment);
+                //For pushing data to firebase
                 databaseReference.child(id).child("uid").setValue(uid);
                 databaseReference.child(id).child("name").setValue(name);
                 databaseReference.child(id).child("email").setValue(email);
